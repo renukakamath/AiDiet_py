@@ -1,0 +1,48 @@
+{% include 'adminheader.html' %}
+
+<center>
+	<h2 align="center">View Health profile</h2>
+
+	<table  class="table" style="width: 500px">
+
+		
+	<tr>
+		<th>gender</th>
+
+		<th>Dob</th>
+		<th>
+			Blood pressure
+		</th>
+		
+		<th>
+			Sugar level
+		</th>
+
+		<th>Cholesterol level</th>
+		<th>Body weight</th>
+		<th>Height</th>
+	</tr>
+
+	
+			{% for row in data['viewfeed'] %}
+			<tr>
+				<td>{{row['gender']}}</td>
+
+				<td>{{row['Dob']}}</td>
+				<td>{{row['blood_pressure']}}</td>
+				<td>{{row['sugar_level']}}</td>
+				
+				<td>{{row['cholesterol_level']}}</td>
+				<td>{{row['body_weight']}}</td>
+				<td>{{row['Height']}}</td>
+			<!-- 	<td><a href="/admin/suggest?id={{row['userid']}}">Add Suggestion</td> -->
+			</tr>
+			{% endfor %}
+
+	
+	</table>
+	
+</form>
+
+</center>
+{% include 'footer.html' %}

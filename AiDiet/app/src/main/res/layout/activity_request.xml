@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/diet_bg"
+    android:orientation="vertical"
+    tools:context=".Request">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Diet Request" />
+
+    <Button
+        android:id="@+id/dietsugg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Diet Suggestions" />
+
+
+
+    <Button
+        android:id="@+id/chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Chat" />
+
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Excersice  Request" />
+
+
+
+    <Button
+        android:id="@+id/excersice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Excersice Suggestions" />
+
+
+
+    <Button
+        android:id="@+id/bt_count"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:text="Upload Excersice" />
+
+
+
+    <Button
+        android:id="@+id/bt_view_donors"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:text="Water" />
+</LinearLayout>

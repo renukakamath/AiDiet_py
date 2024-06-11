@@ -1,0 +1,31 @@
+{% include 'adminheader.html'%}
+<form method="post"  enctype="multipart/form-data">
+	<table align="center" class="table"  style="width: 500px">
+		<h2 align="center">Add Meal Type</h2>
+		
+
+		<tr>
+			<th>Type</th>
+			<td><input type="text"  class="form-control" name="name"></ins></td>
+		</tr>
+		<tr><td align="center"  colspan="2"><input  class="btn btn-success" type="submit" name="submit" value="Add suggestion"></td></tr>
+	</table>
+	<table align="center"   class="table"  style="width: 500px">
+		<h2 align="center">View Meal Type</h2>
+		<tr>
+			<th>type</th>
+			
+		</tr>
+
+		<tbody>
+			{% for row in data['viewfeed'] %}
+			<tr>
+
+			
+				<td>{{row['meal']}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	</form>
+	{% include 'footer.html' %}

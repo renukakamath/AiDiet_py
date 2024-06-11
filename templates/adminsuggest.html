@@ -1,0 +1,75 @@
+{% include 'adminheader.html'%}
+<form method="post">
+	<table align="center" border="1">
+		<h2 align="center">Add Suggestiopn</h2>
+		<tr>
+			<th>meal type</th>
+			<td><select  name="meal_id">
+				{% for  row in data['meal']%}
+
+				<option value="{{row['meal_id']}}">{{row['meal']}}</option>
+				{% endfor %}
+
+			</select>
+			</td>
+		</tr>
+
+		<tr>
+			<th>Food</th>
+			<td><select  name="food_id">
+				{% for  row in data['food']%}
+
+				<option value="{{row['foodee_id']}}">{{row['food']}}</option>
+				{% endfor %}
+
+			</select>
+			</td>
+		</tr>
+		<tr>
+			
+			<th>Quantity</th>
+			<td><input type="text" name="qty"></td>
+
+		</tr>
+		<tr>
+			
+			<th>Calories</th>
+			<td><input type="text" name="cal"></td>
+
+		</tr>
+		
+
+
+		<tr>
+			<th>comment</th>
+			<td><input type="text" name="cmt"></ins></td>
+		</tr>
+		<tr><td align="center" colspan="2"><input type="submit" name="submit" value="Add suggestion"></td></tr>
+	</table>
+	<table align="center" border="1">
+		<h2 align="center">View Suggestion</h2>
+		<tr>
+			<th>Meal</th>
+			<th>Food</th>
+			<th>Quantity</th>
+			<th>Calories</th>
+			<th>comment</th>
+			<th>date</th>
+
+		</tr>
+
+		<tbody>
+			{% for row in data['viewsug'] %}
+			<tr>
+				<td>{{row['meal']}}</td>
+				<td>{{row['food']}}</td>
+				<td>{{row['quantity']}}</td>
+				<td>{{row['calories']}}</td>
+				<td>{{row['comments']}}</td>
+				<td>{{row['date']}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	</form>
+	{% include 'footer.html' %}

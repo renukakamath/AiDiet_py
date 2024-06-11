@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/diet_bg"
+    android:orientation="vertical"
+    tools:context=".todayhealths">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        android:text=" walking" />
+
+    <ListView
+        android:id="@+id/walking"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+      />
+
+
+
+    <TextView
+        android:id="@+id/djfkhdskjf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Drinking Water " />
+
+    <ListView
+        android:id="@+id/drinking"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+       />
+
+
+
+
+    <TextView
+        android:id="@+id/sda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Food Diets" />
+
+    <ListView
+        android:id="@+id/diet"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+      />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Excersice" />
+
+    <ListView
+        android:id="@+id/excersice"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        />
+</LinearLayout>

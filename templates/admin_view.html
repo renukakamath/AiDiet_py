@@ -1,0 +1,61 @@
+{% include 'adminheader.html'%}
+<form method="post"  enctype="multipart/form-data">
+	<table align="center" class="table"  style="width: 500px">
+		<h2 align="center">Add Exercise Details</h2>
+		<tr>
+			<th>Exercise Name</th>
+			<td><input type="text" class="form-control" name="ename"></td>
+		</tr>
+		<tr>
+			<th>Exercise Description</th>
+			<td><textarea class="form-control" name="edesc"></textarea> </td>
+		</tr>
+		
+		<tr>
+			<th>Video</th>
+			<td><input type="file"  class="form-control" name="img"></ins></td>
+		</tr>
+
+		<tr>
+			<th>Time</th>
+			<td><input type="time"  class="form-control" name="time"><td>
+		</tr>
+		<tr>
+			<th>count</th>
+			<td><input type="text"  class="form-control" name="count"></td>
+		</tr>
+
+		
+		<tr><td align="center"  colspan="2"><input  class="btn btn-success" type="submit" name="submit" value="Add suggestion"></td></tr>
+	</table>
+	<table align="center"   class="table"  style="width: 500px">
+		<h2 align="center">View Excersice Video</h2>
+		<tr>
+			<th>Exercise name</th>
+			<th>Description</th>
+			<th>Video</th>
+			<th>Date</th>
+			<th>Time</th>
+			<th>Count</th>
+		</tr>
+
+		<tbody>
+			{% for row in data['viewfeed'] %}
+			<tr>
+				<td>{{row['ename']}}</td>
+				<td>{{row['edesc']}}</td>
+				<td><video width="320" height="240" controls>
+  <source src="/{{row['video']}}" type="video/mp4">
+  <source src="/{{row['video']}}" type="video/ogg">
+
+</video>
+				</td>
+				<td>{{row['date']}}</td>
+				<td>{{row['time']}}</td>
+				<td>{{row['count']}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	</form>
+	{% include 'footer.html' %}

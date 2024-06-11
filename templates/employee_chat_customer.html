@@ -1,0 +1,83 @@
+{% include 'adminheader.html' %}
+
+{% block login %}
+<!-- ======= Hero Section ======= -->
+
+{% endblock %}
+
+<!-- Chat Messages Section -->
+<center>
+  <h1>Message Box</h1>
+  <div class="chat-container">
+    <table class="table chat-table">
+      {% for row in data['msg'] %}
+        {% if row['sender_id'] == data['bank'] %}
+          <tr class="sender-row">
+            <td align="right">{{ row['message'] }}</td>
+          </tr>
+        {% else %}
+          <tr class="receiver-row">
+            <td align="left">{{ row['message'] }}</td>
+          </tr>
+        {% endif %}
+      {% endfor %}
+    </table>
+
+  </div>
+<section id="hero" style="height: 500px;">
+  <div class="hero-container">
+    <div data-aos="fade-in">
+      <center>
+        <form method="post">
+          <table class="table" style="width: 750px; color: white; margin-right: 235px;">
+            <tr>
+              <th>Message</th>
+              <td><input type="text" name="message" required class="form-control"></td>
+            </tr>
+            <tr>
+              <td align="center" colspan="2">
+                <input type="submit" name="submit" value="Send" class="btn btn-danger">
+              </td>
+            </tr>
+          </table>
+        </form>
+      </center>
+    </div>
+  </div>
+</section><!-- End Hero -->
+
+</center>
+
+<style type="text/css">
+  tr, td, th {
+    border: 0px !important;
+  }
+
+  /* Styling for chat messages */
+  .chat-container {
+    width: 500px;
+    margin-bottom: 2rem; /* Reduced margin to move the chat input bar closer to the messages */
+    margin-top: 2rem;
+  }
+
+  .chat-table {
+    width: 100%;
+  }
+
+  .sender-row {
+    background-color: #f44336; /* Red - use your preferred color */
+    color: white;
+  }
+
+  .receiver-row {
+    background-color: #4CAF50; /* Green - use your preferred color */
+    color: white;
+  }
+
+  .sender-message,
+  .receiver-message {
+    padding: 10px;
+  }
+</style>
+
+{% include 'footer.html' %}
